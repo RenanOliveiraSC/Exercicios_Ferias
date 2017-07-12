@@ -1,4 +1,4 @@
-package exercicio_6_resumo_A;
+package exercicio_6_Pessoa_Aluno_Professor;
 
 public class Pessoa {
 
