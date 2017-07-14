@@ -10,14 +10,17 @@ public class TestePorta {
 		Porta porta1 = new Porta();
 		Porta porta2 = new Porta();
 
-		System.out.println("Deseja abrir a porta 01 ? - Digite 1 para SIM e 2 para NAO");
-		String resposta1 = sc.nextLine();
-		System.out.println("Deseja abrir a porta 02 ? - Digite 1 para SIM e 2 para NAO");
-		String resposta2 = sc.nextLine();
+		porta1.abre();
+		porta1.setCor("Amarelo");
+		porta1.fecha();
+		porta1.pinta("Branco");
 
-		System.out.println("Status da Porta: " + resposta1.length() + "\nCor: " + porta1.getCor());
-		porta1.converteStringEmBoolean(resposta1);
-		porta2.converteStringEmBoolean(resposta2);
+		porta2.abre();
+		porta2.pinta("Marrom");
+
+		System.out.println(porta1.getCor() + "\n" + porta1.isAberta());
+		System.out.println();
+		System.out.println(porta2.getCor() + "\n" + porta2.isAberta());
 
 	}
 }

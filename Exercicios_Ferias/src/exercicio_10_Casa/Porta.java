@@ -4,9 +4,7 @@ public class Porta {
 
 	private boolean aberta;
 	private String cor;
-	private double dimensaoX;
-	private double dimensaoY;
-	private double dimensaoZ;
+	private float dimensaoX, dimensaoY, dimensaoZ;
 
 	public void abre() {
 		this.aberta = true;
@@ -16,26 +14,40 @@ public class Porta {
 		this.aberta = false;
 	}
 
-	public void converteStringEmBoolean(String respUsuario) {
-		if (respUsuario.equals("1")) {
-			abre();
-		} else if (respUsuario.equals("2")) {
-			fecha();
-		} else {
-
-		}
+	public boolean estaAberta() {
+		return this.aberta;
 	}
 
 	public void pinta(String s) {
-		cor = s;
+		this.cor = s;
 	}
 
-	public boolean estaAberta() {
-		if (aberta == true) {
-			return true;
-		} else {
-			return false;
-		}
+	public String getCor() {
+		return this.cor;
+	}
+
+	public float getDimensaoX() {
+		return dimensaoX;
+	}
+
+	public void setDimensaoX(float dimensaoX) {
+		this.dimensaoX = dimensaoX;
+	}
+
+	public float getDimensaoY() {
+		return dimensaoY;
+	}
+
+	public void setDimensaoY(float dimensaoY) {
+		this.dimensaoY = dimensaoY;
+	}
+
+	public float getDimensaoZ() {
+		return dimensaoZ;
+	}
+
+	public void setDimensaoZ(float dimensaoZ) {
+		this.dimensaoZ = dimensaoZ;
 	}
 
 	public boolean isAberta() {
@@ -46,36 +58,8 @@ public class Porta {
 		this.aberta = aberta;
 	}
 
-	public String getCor() {
-		return cor;
-	}
-
 	public void setCor(String cor) {
 		this.cor = cor;
-	}
-
-	public double getDimensaoX() {
-		return dimensaoX;
-	}
-
-	public void setDimensaoX(double dimensaoX) {
-		this.dimensaoX = dimensaoX;
-	}
-
-	public double getDimensaoY() {
-		return dimensaoY;
-	}
-
-	public void setDimensaoY(double dimensaoY) {
-		this.dimensaoY = dimensaoY;
-	}
-
-	public double getDimensaoZ() {
-		return dimensaoZ;
-	}
-
-	public void setDimensaoZ(double dimensaoZ) {
-		this.dimensaoZ = dimensaoZ;
 	}
 
 }
