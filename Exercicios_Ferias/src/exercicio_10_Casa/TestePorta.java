@@ -1,26 +1,22 @@
 package exercicio_10_Casa;
 
-import java.util.Scanner;
-
 public class TestePorta {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
 
 		Porta porta1 = new Porta();
 		Porta porta2 = new Porta();
 
 		porta1.abre();
 		porta1.setCor("Amarelo");
+		porta1.setCor("Azul");
 		porta1.fecha();
-		porta1.pinta("Branco");
 
 		porta2.abre();
-		porta2.pinta("Marrom");
+		porta2.setCor("Azul");
+		porta2.setCor("Amarelo");
 
-		System.out.println(porta1.getCor() + "\n" + porta1.isAberta());
-		System.out.println();
-		System.out.println(porta2.getCor() + "\n" + porta2.isAberta());
-
+		System.out.println("Status da Porta: " + porta1.estaAberta() + "\nCor da Porta: " + porta1.getCor());
+		System.out.println("Status da Porta: " + porta2.estaAberta() + "\nCor da Porta: " + porta2.getCor());
 	}
 }

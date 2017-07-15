@@ -8,22 +8,38 @@ public class Porta {
 
 	public void abre() {
 		this.aberta = true;
+
 	}
 
 	public void fecha() {
 		this.aberta = false;
+
 	}
 
 	public boolean estaAberta() {
-		return this.aberta;
+		return aberta;
+
 	}
 
 	public void pinta(String s) {
 		this.cor = s;
 	}
 
+	public boolean isAberta() {
+		return aberta;
+
+	}
+
+	public void setAberta(boolean aberta) {
+		this.aberta = aberta;
+	}
+
 	public String getCor() {
-		return this.cor;
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
 	}
 
 	public float getDimensaoX() {
@@ -48,18 +64,6 @@ public class Porta {
 
 	public void setDimensaoZ(float dimensaoZ) {
 		this.dimensaoZ = dimensaoZ;
-	}
-
-	public boolean isAberta() {
-		return aberta;
-	}
-
-	public void setAberta(boolean aberta) {
-		this.aberta = aberta;
-	}
-
-	public void setCor(String cor) {
-		this.cor = cor;
 	}
 
 }
